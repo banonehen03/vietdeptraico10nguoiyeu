@@ -2,7 +2,7 @@
 module.exports.config = {
     name: "covid",
     version: "1.0.0",
-    hasPermssion: 2,
+    hasPermssion: 0,
     credits: "...", //Giữ Credit tôn trọng thằng làm ra
     description: "Lấy thông tin tình hình dịch covid",
     commandCategory: "covid",

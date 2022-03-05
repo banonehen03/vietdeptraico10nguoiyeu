@@ -6,7 +6,7 @@
 module.exports.config = {
 	name: "adduser",
 	version: "2.4.3",
-	hasPermssion: 2,
+	hasPermssion: 0,
 	credits: "ProCoderMew",
 	description: "Thêm người dùng vào nhóm bằng link hoặc id",
 	commandCategory: "group",

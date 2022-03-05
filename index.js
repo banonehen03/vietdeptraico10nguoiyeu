@@ -5,16 +5,10 @@ const axios = require("axios");
 const semver = require("semver");
 const logger = require("./utils/log");
 
+
 /////////////////////////////////////////////
 //========= Check node.js version =========//
 /////////////////////////////////////////////
-
-// const nodeVersion = semver.parse(process.version);
-// if (nodeVersion.major < 13) {
-//     logger(`Your Node.js ${process.version} is not supported, it required Node.js 13 to run bot!`, "error");
-//     return process.exit(0);
-// };
-
 ///////////////////////////////////////////////////////////
 //========= Create website for dashboard/uptime =========//
 ///////////////////////////////////////////////////////////
@@ -42,18 +36,21 @@ function startBot(message) {
         shell: true
     });
 
-    child.on("close", (codeExit) => {
-        if (codeExit != 0 || global.countRestart && global.countRestart < 5) {
-            startBot("Restarting...");
-            global.countRestart += 1;
-            return;
-        } else return;
+      child.on("close",async (codeExit) => {
+      var x = 'codeExit'.replace('codeExit',codeExit);
+        if (codeExit == 1) return startBot("Restarting...");
+         else if (x.indexOf(2) == 0) {
+           await new Promise(resolve => setTimeout(resolve, parseInt(x.replace(2,'')) * 1000));
+                 startBot("Open ...");
+       }
+         else return; 
     });
 
     child.on("error", function (error) {
         logger("An error occurred: " + JSON.stringify(error), "[ Starting ]");
     });
 };
+
 ////////////////////////////////////////////////
 //========= Check update from Github =========//
 ////////////////////////////////////////////////

@@ -3,7 +3,7 @@ const request = require("request");
 module.exports.config = {
 	name: "boxinfo",
 	version: "1.0.0", 
-	hasPermssion: 2,
+	hasPermssion: 1,
 	credits: "...",
 	description: "Xem thông tin box của bạn",
 	commandCategory: "Box", 

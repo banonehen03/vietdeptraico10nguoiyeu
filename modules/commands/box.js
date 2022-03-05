@@ -1,7 +1,7 @@
 module.exports.config = {
 	name: "box",
 	version: "1.0.0",
-	hasPermssion: 2,
+	hasPermssion: 1,
 	credits: "...",
     description: "Các cài đặt của nhóm chat.",
 	commandCategory: "box",

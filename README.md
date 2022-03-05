@@ -1,8 +1,8 @@
-npm i /n
-npm install /n
-npm update /n
-npm i canvas /n
-npm i lyrics-finder /n
-npm i fca-horizon-remake /n
-npm install ytdl-core@latest /n
+npm i 
+npm install
+npm update 
+npm i canvas 
+npm i lyrics-finder 
+npm i fca-horizon-remake 
+npm install ytdl-core@latest 
 npm start 
